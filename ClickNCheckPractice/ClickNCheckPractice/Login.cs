@@ -45,7 +45,7 @@ namespace ClickNCheckPractice
 
         [FunctionName("Login")]
         public static IActionResult Run(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, [Table("Users")] out Users ud, ILogger log)
+      [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, [Microsoft.Azure.WebJobs.Table("Users")] out Users ud, ILogger log)
             {
                 log.LogInformation("C# HTTP trigger function processed a request.");
 
